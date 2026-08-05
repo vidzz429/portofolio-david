@@ -28,13 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      // Mengambil data input
       const name = document.getElementById("form-name")
         ? document.getElementById("form-name").value.trim()
         : "";
       const taskType = document.getElementById("form-task-type")
-        ? document.getElementById("form-task-type").value.trim()
-        : "-";
+        ? document.getElementById("form-task-type").value
+        : "Diskusi Proyek";
       const message = document.getElementById("form-message")
         ? document.getElementById("form-message").value.trim()
         : "";
@@ -44,16 +43,14 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Menyusun teks mentah
-      const rawText = `Halo David, Saya *${name}*\n*Topik/Mata Pelajaran:* ${taskType}\n\n*Detail Pesan:*\n${message}`;
-
-      // encodeURIComponent memastikan semua spasi dan simbol aman untuk URL
+      // Format teks untuk WhatsApp
+      const rawText = `Halo David, Saya *${name}*\n*Kebutuhan:* ${taskType}\n\n*Detail Pesan:*\n${message}`;
       const textMessage = encodeURIComponent(rawText);
 
-      // URL WhatsApp dengan nomor tujuan
+      // Tautan WhatsApp tujuan
       const waUrl = `https://wa.me/6285723780454?text=${textMessage}`;
 
-      // Membuka tautan WhatsApp di tab baru
+      // Buka tautan di tab baru
       window.open(waUrl, "_blank");
     });
   }
