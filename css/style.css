@@ -1,82 +1,98 @@
 /* Custom Styling & Utilities for David Febriansyah Portfolio */
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
 
 /* Base Smooth Scroll & Selection Styling */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 ::selection {
-    background-color: #06b6d4;
-    color: #0f172a;
+  background-color: #06b6d4;
+  color: #0f172a;
 }
 
 /* Glassmorphism Cards */
 .glass-card {
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-card-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card-hover:hover {
-    background: rgba(30, 41, 59, 0.85);
-    border-color: rgba(34, 211, 238, 0.3);
-    box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.25);
-    transform: translateY(-4px);
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(34, 211, 238, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.25);
+  transform: translateY(-4px);
 }
 
 /* Gradient Text Effect */
 .gradient-text {
-    background: linear-gradient(135deg, #38bdf8 0%, #22d3ee 50%, #34d399 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #38bdf8 0%, #22d3ee 50%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Radial Background Accent */
 .bg-radial-gradient {
-    background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(14, 165, 233, 0.15) 0%,
+    rgba(15, 23, 42, 0) 70%
+  );
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #020617;
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #1e293b;
-    border-radius: 4px;
-    border: 1px solid #334155;
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid #334155;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0891b2;
+  background: #0891b2;
 }
 
 /* Animations */
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulseGlow {
-    0%, 100% { opacity: 0.6; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.03); }
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
 }
 
 .animate-float {
-    animation: float 4s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 
 .animate-pulse-glow {
-    animation: pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
