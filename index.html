@@ -1,0 +1,1247 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Febriansyah - Portofolio Pelajar</title>
+    <meta
+      name="description"
+      content="Portofolio pribadi David Febriansyah,Pelajar yang sedang belajar PHP, Laravel, dan pemrograman web modern."
+    />
+    <link rel="icon" type="image/png" href="logo-vz.png" />
+    <!-- Google Fonts: Plus Jakarta Sans & Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- External Tailwind Config & Script JS -->
+    <script src="tailwind.config.js"></script>
+
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-900 min-h-screen flex flex-col justify-between overflow-x-hidden"
+  >
+    <!-- Background Decorative Gradients -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div
+        class="absolute -top-40 -left-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute top-1/3 -right-40 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute -bottom-40 left-1/3 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-20"
+      ></div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header
+      class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <!-- Brand Logo -->
+        <!-- Brand Logo Navbar -->
+        <a href="#hero" class="flex items-center space-x-3 group">
+          <img
+            src="logo-vz.png"
+            alt="Logo VZ"
+            class="w-10 h-10 object-contain rounded-xl shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-bold text-lg tracking-tight text-white group-hover:text-cyan-400 transition-colors"
+            >
+              Vidz<span class="text-cyan-400">.dev</span>
+            </span>
+            <span class="text-xs text-slate-400 font-mono">Pelajar</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a
+            href="#hero"
+            class="text-slate-300 hover:text-cyan-400 transition-colors py-1 relative group"
+          >
+            Beranda
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#tentang"
+            class="text-slate-300 hover:text-cyan-400 transition-colors py-1 relative group"
+          >
+            Tentang Saya
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#skills"
+            class="text-slate-300 hover:text-cyan-400 transition-colors py-1 relative group"
+          >
+            Skills & Tools
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#proyek"
+            class="text-slate-300 hover:text-cyan-400 transition-colors py-1 relative group"
+          >
+            Proyek
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#kontak"
+            class="text-slate-300 hover:text-cyan-400 transition-colors py-1 relative group"
+          >
+            Kontak
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </nav>
+
+        <!-- CTA Header Button -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a
+            href="https://wa.me/6285723780454"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 font-semibold text-xs tracking-wider uppercase transition-all duration-300 shadow-sm hover:shadow-emerald-500/20"
+          >
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>Chat WA</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button
+          id="menu-toggle"
+          aria-label="Buka Menu Navigasi"
+          class="md:hidden p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none"
+        >
+          <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Drawer Navigation -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur-xl px-4 pt-4 pb-6 space-y-3"
+      >
+        <a
+          href="#hero"
+          class="mobile-link block px-4 py-2.5 rounded-lg text-slate-200 hover:bg-slate-900 hover:text-cyan-400 font-medium"
+          >Beranda</a
+        >
+        <a
+          href="#tentang"
+          class="mobile-link block px-4 py-2.5 rounded-lg text-slate-200 hover:bg-slate-900 hover:text-cyan-400 font-medium"
+          >Tentang Saya</a
+        >
+        <a
+          href="#skills"
+          class="mobile-link block px-4 py-2.5 rounded-lg text-slate-200 hover:bg-slate-900 hover:text-cyan-400 font-medium"
+          >Skills & Tools</a
+        >
+        <a
+          href="#proyek"
+          class="mobile-link block px-4 py-2.5 rounded-lg text-slate-200 hover:bg-slate-900 hover:text-cyan-400 font-medium"
+          >Showcase Proyek</a
+        >
+        <a
+          href="#kontak"
+          class="mobile-link block px-4 py-2.5 rounded-lg text-slate-200 hover:bg-slate-900 hover:text-cyan-400 font-medium"
+          >Kontak & Medsos</a
+        >
+        <div class="pt-2">
+          <a
+            href="https://wa.me/6285723780454"
+            target="_blank"
+            class="w-full flex items-center justify-center space-x-2 py-3 rounded-xl bg-emerald-500 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/20"
+          >
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Hubungi via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 space-y-24 sm:space-y-32 pb-24">
+      <!-- HERO SECTION -->
+      <section
+        id="hero"
+        class="pt-12 sm:pt-20 lg:pt-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center"
+        >
+          <!-- Hero Text Left -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <!-- Status Badge -->
+            <div
+              class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide shadow-sm"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"
+              ></span>
+              <span class="w-2 h-2 rounded-full bg-emerald-400 -ml-4"></span>
+              <span>Pelajar — Siap Berkarya</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1
+              class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight sm:leading-none"
+            >
+              Halo! 👋 Saya <br class="hidden sm:inline" />
+              <span class="gradient-text">David Febriansyah</span>
+            </h1>
+
+            <!-- Catchy Sub-headline -->
+            <p
+              class="text-slate-300 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0"
+            >
+              Antusias mengeksplorasi dunia
+              <span class="text-emerald-300 font-semibold">Pelajar</span
+              >. Gemar ngulik kode, bereksperimen dengan logika pemrograman.
+            </p>
+
+            <!-- CTAs -->
+            <div
+              class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+            >
+              <a
+                href="#proyek"
+                class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-brand-600 text-slate-950 font-bold text-sm sm:text-base tracking-wide hover:brightness-110 shadow-lg shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
+              >
+                <span>Lihat Project</span>
+                <i class="fa-solid fa-arrow-down-long text-slate-950"></i>
+              </a>
+
+              <a
+                href="https://wa.me/6285723780454"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 px-7 py-3.5 rounded-xl glass-card text-emerald-400 hover:text-white border border-emerald-500/40 hover:bg-emerald-500/20 font-semibold text-sm sm:text-base transition-all duration-300"
+              >
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Hubungi WhatsApp</span>
+              </a>
+            </div>
+
+            <!-- Quick Highlights & Hobbies -->
+            <div
+              class="pt-6 border-t border-slate-800/80 grid grid-cols-2 gap-4 text-center lg:text-left"
+            >
+              <div
+                class="bg-slate-900/60 p-3 rounded-xl border border-slate-800"
+              >
+                <div
+                  class="text-cyan-400 text-xs uppercase tracking-wider font-mono"
+                >
+                  Fokus
+                </div>
+                <div class="text-white font-bold text-sm sm:text-base mt-0.5">
+                  Belajar
+                </div>
+              </div>
+              <div
+                class="bg-slate-900/60 p-3 rounded-xl border border-slate-800"
+              >
+                <div
+                  class="text-amber-400 text-xs uppercase tracking-wider font-mono"
+                >
+                  Minat & Hobi
+                </div>
+                <div class="text-white font-bold text-sm sm:text-base mt-0.5">
+                  🎣 Mancing & 🎮 Main Game
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Interactive Code / Visual Card Right -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md">
+              <!-- Glow behind mockup -->
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-2xl blur-lg opacity-30 animate-pulse-glow"
+              ></div>
+
+              <!-- IDE Code Window Mockup -->
+              <div
+                class="relative glass-card rounded-2xl border border-slate-700/80 shadow-2xl overflow-hidden"
+              >
+                <!-- Window Title Bar -->
+                <div
+                  class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between"
+                >
+                  <div class="flex items-center space-x-2">
+                    <span
+                      class="w-3 h-3 rounded-full bg-rose-500 inline-block"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-full bg-amber-500 inline-block"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-full bg-emerald-500 inline-block"
+                    ></span>
+                  </div>
+                  <div
+                    class="text-xs font-mono text-slate-400 flex items-center space-x-1"
+                  >
+                    <i class="fa-solid fa-code text-cyan-400"></i>
+                    <span>Vidz.php</span>
+                  </div>
+                  <div class="text-xs text-slate-500 font-mono">UTF-8</div>
+                </div>
+
+                <!-- Code Content -->
+                <div
+                  class="p-5 font-mono text-xs sm:text-sm space-y-2 bg-slate-950/80 leading-relaxed text-slate-300"
+                >
+                  <div><span class="text-purple-400">&lt;?php</span></div>
+                  <br />
+                  <div>
+                    <span class="text-purple-400">class</span>
+                    <span class="text-yellow-300">Pemula</span> {
+                  </div>
+                  <div class="pl-4">
+                    <span class="text-blue-400">public string</span>
+                    <span class="text-cyan-300">$nama</span> =
+                    <span class="text-emerald-300">'David Febriansyah'</span>;
+                  </div>
+                  <div class="pl-4">
+                    <span class="text-blue-400">public array</span>
+                    <span class="text-cyan-300">$skills</span> = [<br />
+                    <span class="pl-4 text-emerald-300">'HTML'</span>,
+                    <span class="text-emerald-300">'CSS'</span>,
+                    <span class="text-emerald-300">'PHP'</span>,
+                    <span class="text-emerald-300">'Laravel'</span>,
+                    <span class="text-emerald-300">'Git'</span><br />
+                    ];
+                  </div>
+                  <div class="pl-4">
+                    <span class="text-blue-400">public array</span>
+                    <span class="text-cyan-300">$hobi</span> = [<span
+                      class="text-emerald-300"
+                      >'Mancing 🎣'</span
+                    >, <span class="text-emerald-300">'Main Game 🎮'</span>];
+                  </div>
+                  <br />
+                  <div class="pl-4">
+                    <span class="text-purple-400">public function</span>
+                    <span class="text-blue-300">siapBelajar</span>():
+                    <span class="text-yellow-300">bool</span> {<br />
+                    <span class="pl-4 text-purple-400">return</span>
+                    <span class="text-amber-300">true</span>;<br />
+                    }
+                  </div>
+                  <div>}</div>
+                </div>
+
+                <!-- Bottom Floating Tech Pill -->
+                <div
+                  class="bg-slate-900/90 p-3.5 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-300"
+                >
+                  <span class="flex items-center space-x-2">
+                    <i class="fa-brands fa-laravel text-rose-500 text-sm"></i>
+                    <i class="fa-brands fa-php text-indigo-400 text-sm"></i>
+                    <i class="fa-brands fa-html5 text-orange-500 text-sm"></i>
+                    <i class="fa-brands fa-css3-alt text-blue-500 text-sm"></i>
+                    <i class="fa-brands fa-git-alt text-amber-500 text-sm"></i>
+                  </span>
+                  <span
+                    class="text-emerald-400 font-mono flex items-center space-x-1"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-emerald-400 inline-block"
+                    ></span>
+                    <span>Fokus: Belajar</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TENTANG SAYA SECTION -->
+      <section id="tentang" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+          <h2
+            class="text-xs sm:text-sm font-bold font-mono tracking-widest text-cyan-400 uppercase"
+          >
+            // Profile & Passion
+          </h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Tentang <span class="gradient-text">Saya</span>
+          </h3>
+          <div
+            class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-emerald-400 mx-auto rounded-full"
+          ></div>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Story Card Left -->
+          <div
+            class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6 flex flex-col justify-between"
+          >
+            <div class="space-y-4">
+              <div
+                class="flex items-center space-x-3 text-cyan-400 font-mono text-sm"
+              >
+                <i class="fa-solid fa-user-gear text-lg"></i>
+                <span>Latar Belakang & Motivasi</span>
+              </div>
+              <h4 class="text-xl sm:text-2xl font-bold text-white leading-snug">
+                "Berawal dari rasa penasaran saat mencoba-coba baris kode
+                pertama, kini coding menjadi passion utama saya."
+              </h4>
+              <p class="text-slate-300 text-base leading-relaxed">
+                Ketertarikan saya di bidang teknologi bermula dari rasa seru
+                saat mencoba-coba baris kode, bereksperimen dengan logika
+                pemrograman, dan melihat bagaimana ide abstrak bisa menjadi
+                aplikasi yang berjalan dengan lancar.
+              </p>
+              <p class="text-slate-300 text-base leading-relaxed">
+                Saya senantiasa proaktif mengasah keterampilan dan fokus belajar
+                melalui pengerjaan proyek praktik mandiri, membangun sistem web
+                backend dengan PHP & Laravel, hingga mengelola repository kode
+                di GitHub. Di samping kesibukan koding, saya mengisi waktu luang
+                dengan <strong class="text-amber-300">mancing 🎣</strong> dan
+                <strong class="text-amber-300">main game 🎮</strong>.
+              </p>
+            </div>
+
+            <!-- Highlights Badge Grid -->
+            <div
+              class="pt-6 border-t border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-4"
+            >
+              <div
+                class="flex items-start space-x-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800"
+              >
+                <div class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+                  <i class="fa-solid fa-lightbulb text-lg"></i>
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-white">Problem Solver</h5>
+                  <p class="text-xs text-slate-400 mt-0.5">
+                    Suka tantangan debugging & penyelesaian masalah logika.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex items-start space-x-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800"
+              >
+                <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+                  <i class="fa-solid fa-rocket text-lg"></i>
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-white">Siap Belajar</h5>
+                  <p class="text-xs text-slate-400 mt-0.5">
+                    Siap beradaptasi cepat dengan teknologi baru dan tren
+                    modern.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info Cards Right -->
+          <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
+            <!-- Bio Detail Card -->
+            <div
+              class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-5"
+            >
+              <h4
+                class="text-lg font-bold text-white flex items-center space-x-2 border-b border-slate-800 pb-3"
+              >
+                <i class="fa-solid fa-id-card text-cyan-400"></i>
+                <span>Data Diri Singkat</span>
+              </h4>
+
+              <div class="space-y-3.5 text-sm">
+                <div
+                  class="flex justify-between items-center py-1 border-b border-slate-800/50"
+                >
+                  <span class="text-slate-400">Nama Lengkap</span>
+                  <span class="text-white font-semibold"
+                    >David Febriansyah</span
+                  >
+                </div>
+                <div
+                  class="flex justify-between items-center py-1 border-b border-slate-800/50"
+                >
+                  <span class="text-slate-400">Status</span>
+                  <span class="text-cyan-300 font-semibold">Pelajar</span>
+                </div>
+                <div
+                  class="flex justify-between items-center py-1 border-b border-slate-800/50"
+                >
+                  <span class="text-slate-400">Fokus</span>
+                  <span
+                    class="px-2.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 text-xs font-mono font-bold"
+                    >Belajar</span
+                  >
+                </div>
+                <div class="flex justify-between items-center py-1">
+                  <span class="text-slate-400">Hobi & Minat</span>
+                  <span class="text-amber-300 font-semibold"
+                    >Mancing 🎣 & Main Game 🎮</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Hobby & Focus Card -->
+            <div
+              class="glass-card p-6 rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900/90 to-cyan-950/30"
+            >
+              <div class="flex items-center space-x-3 mb-3">
+                <div
+                  class="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400"
+                >
+                  <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-white">Filosofi Hobi</h5>
+                  <p class="text-xs text-slate-400">Mancing & Main Game</p>
+                </div>
+              </div>
+              <p class="text-slate-300 text-xs leading-relaxed italic">
+                "Mancing melatih kesabaran, sedangkan main game mengasah
+                ketangkasan serta strategi pemecahan masalah. Keduanya sangat
+                berguna saat mendebug baris kode yang rumit."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS & TOOLS SECTION -->
+      <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+          <h2
+            class="text-xs sm:text-sm font-bold font-mono tracking-widest text-cyan-400 uppercase"
+          >
+            // Tech Stack & Mastery
+          </h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Keahlian & <span class="gradient-text">Tools Pemrograman</span>
+          </h3>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Teknologi dan tools yang rutin saya pelajari dan gunakan dalam
+            mengerjakan proyek web mandiri.
+          </p>
+          <div
+            class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-emerald-400 mx-auto rounded-full"
+          ></div>
+        </div>
+
+        <!-- Skills Grid -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6"
+        >
+          <!-- HTML5 -->
+          <div
+            class="glass-card glass-card-hover p-5 rounded-2xl text-center space-y-3 flex flex-col items-center justify-center group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-500 text-3xl group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">HTML5</h4>
+              <span class="text-xs font-mono text-slate-400"
+                >Semantik & Struktur</span
+              >
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-orange-500/10 text-orange-400 text-[10px] font-mono border border-orange-500/20"
+              >Struktur Web</span
+            >
+          </div>
+
+          <!-- CSS3 -->
+          <div
+            class="glass-card glass-card-hover p-5 rounded-2xl text-center space-y-3 flex flex-col items-center justify-center group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-3xl group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">CSS3</h4>
+              <span class="text-xs font-mono text-slate-400"
+                >Styling & Responsive</span
+              >
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-mono border border-blue-500/20"
+              >Tata Letak</span
+            >
+          </div>
+
+          <!-- PHP -->
+          <div
+            class="glass-card glass-card-hover p-5 rounded-2xl text-center space-y-3 flex flex-col items-center justify-center group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-3xl group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-brands fa-php"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">PHP</h4>
+              <span class="text-xs font-mono text-slate-400"
+                >Native & Logic Backend</span
+              >
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 text-[10px] font-mono border border-indigo-500/20"
+              >Backend Core</span
+            >
+          </div>
+
+          <!-- Laravel -->
+          <div
+            class="glass-card glass-card-hover p-5 rounded-2xl text-center space-y-3 flex flex-col items-center justify-center group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-500 text-3xl group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-brands fa-laravel"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">Laravel</h4>
+              <span class="text-xs font-mono text-slate-400"
+                >MVC Framework</span
+              >
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-rose-500/10 text-rose-400 text-[10px] font-mono border border-rose-500/20"
+              >Framework PHP</span
+            >
+          </div>
+
+          <!-- Git & GitHub -->
+          <div
+            class="glass-card glass-card-hover p-5 rounded-2xl text-center space-y-3 flex flex-col items-center justify-center group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 text-3xl group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-brands fa-git-alt"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">Git & GitHub</h4>
+              <span class="text-xs font-mono text-slate-400"
+                >Version Control</span
+              >
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 text-[10px] font-mono border border-amber-500/20"
+              >Manajemen Kode</span
+            >
+          </div>
+
+          <!-- MySQL & Database -->
+          <div
+            class="glass-card glass-card-hover p-5 rounded-2xl text-center space-y-3 flex flex-col items-center justify-center group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-3xl group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">MySQL</h4>
+              <span class="text-xs font-mono text-slate-400"
+                >Relational DB</span
+              >
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 text-[10px] font-mono border border-cyan-500/20"
+              >Database</span
+            >
+          </div>
+        </div>
+
+        <!-- Additional Learning Tools Banner -->
+        <div
+          class="mt-8 glass-card p-5 rounded-2xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+          <div class="flex items-center space-x-3 text-center sm:text-left">
+            <div class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400">
+              <i class="fa-solid fa-laptop-code text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">
+                Tools Pendukung Tambahan
+              </h4>
+              <p class="text-xs text-slate-400">
+                VS Code, XAMPP, Postman, Tailwind CSS, Figma & GitHub CLI.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-center space-x-2 font-mono text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/20"
+          >
+            <i class="fa-solid fa-circle-check text-xs"></i>
+            <span>Terus Belajar & Ngulik</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOWCASE PROJECTS SECTION -->
+      <section id="proyek" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+          <h2
+            class="text-xs sm:text-sm font-bold font-mono tracking-widest text-cyan-400 uppercase"
+          >
+            // Practical Projects & Work
+          </h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Showcase <span class="gradient-text">Proyek Portofolio</span>
+          </h3>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Berikut adalah proyek berbasis web yang telah saya selesaikan, mulai
+            dari aplikasi pengaduan masyarakat hingga modul eksplorasi PHP
+            dasar.
+          </p>
+          <div
+            class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-emerald-400 mx-auto rounded-full"
+          ></div>
+        </div>
+
+        <!-- Project Cards Grid (2 Cards) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- CARD PROYEK 1: Aplikasi Pengaduan Masyarakat -->
+          <div
+            class="glass-card glass-card-hover rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between group"
+          >
+            <div>
+              <!-- Project Banner Graphic -->
+              <div
+                class="relative h-48 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 p-5 flex flex-col justify-between border-b border-slate-800 group-hover:brightness-110 transition-all"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-rose-500/20 text-rose-300 text-xs font-mono font-bold border border-rose-500/30 flex items-center space-x-1"
+                  >
+                    <i class="fa-solid fa-star text-[10px]"></i>
+                    <span>Proyek</span>
+                  </span>
+                  <span class="text-slate-400 font-mono text-xs">2026</span>
+                </div>
+                <div class="space-y-1">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-2"
+                  >
+                    <i class="fa-solid fa-bullhorn text-xl"></i>
+                  </div>
+                  <h4
+                    class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors"
+                  >
+                    Aplikasi Pengaduan Masyarakat
+                  </h4>
+                </div>
+              </div>
+
+              <!-- Content Body -->
+              <div class="p-6 space-y-4">
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  Sistem layanan web interaktif untuk memfasilitasi laporan &
+                  aspirasi pengaduan masyarakat secara terstruktur. Dilengkapi
+                  fitur login multi-user (Masyarakat, Petugas, Admin), tanggapan
+                  pengaduan, dan status verifikasi.
+                </p>
+
+                <!-- Tech Badges -->
+                <div class="flex flex-wrap gap-1.5 pt-2">
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-300 text-xs font-mono border border-indigo-500/20"
+                    >PHP</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-rose-500/10 text-rose-300 text-xs font-mono border border-rose-500/20"
+                    >Laravel</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-300 text-xs font-mono border border-cyan-500/20"
+                    >MySQL</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700"
+                    >Tailwind CSS</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons Footer -->
+            <div class="p-6 pt-0 space-y-2.5">
+              <a
+                href="https://github.com/vidzz04/aplikasipengaduanmasyarakat"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full flex items-center justify-center space-x-2 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-colors shadow-md shadow-cyan-500/20"
+              >
+                <i class="fa-brands fa-github text-sm"></i>
+                <span>Repository GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD PROYEK 2: Eksperimen PHP Dasar -->
+          <div
+            class="glass-card glass-card-hover rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between group"
+          >
+            <div>
+              <!-- Project Banner Graphic -->
+              <div
+                class="relative h-48 bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-950 p-5 flex flex-col justify-between border-b border-slate-800 group-hover:brightness-110 transition-all"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 text-xs font-mono font-bold border border-emerald-500/30 flex items-center space-x-1"
+                  >
+                    <i class="fa-solid fa-code text-[10px]"></i>
+                    <span>Modul Fundamental</span>
+                  </span>
+                  <span class="text-slate-400 font-mono text-xs">2026</span>
+                </div>
+                <div class="space-y-1">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-2"
+                  >
+                    <i class="fa-solid fa-database text-xl"></i>
+                  </div>
+                  <h4
+                    class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors"
+                  >
+                    Proyek Latihan PHP & Database CRUD
+                  </h4>
+                </div>
+              </div>
+
+              <!-- Content Body -->
+              <div class="p-6 space-y-4">
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  Dokumentasi & kumpulan modul latihan dasar backend PHP.
+                  Mencakup implementasi logika CRUD (Create, Read, Update,
+                  Delete), koneksi database MySQL, manipulasi session, dan
+                  sekuritas dasar.
+                </p>
+
+                <!-- Tech Badges -->
+                <div class="flex flex-wrap gap-1.5 pt-2">
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-300 text-xs font-mono border border-indigo-500/20"
+                    >PHP Native</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-300 text-xs font-mono border border-cyan-500/20"
+                    >MySQL DB</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-300 text-xs font-mono border border-emerald-500/20"
+                    >CRUD Logic</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-300 text-xs font-mono border border-amber-500/20"
+                    >Git</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons Footer -->
+            <div class="p-6 pt-0 space-y-2.5">
+              <a
+                href="https://vidzz.great-site.net/login.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full flex items-center justify-center space-x-2 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-colors shadow-md shadow-cyan-500/20"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Live Demo 1 — Data Mahasiswa</span>
+              </a>
+
+              <a
+                href="https://vidzzz.great-site.net/login.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full flex items-center justify-center space-x-2 py-2.5 rounded-xl bg-cyan-500/80 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-colors shadow-md shadow-cyan-500/20"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Live Demo 2 — Data Mahasiswa - 2</span>
+              </a>
+
+              <a
+                href="https://github.com/vidzz04/phpdasar"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full flex items-center justify-center space-x-2 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-medium text-xs border border-slate-700/80 transition-colors"
+              >
+                <i class="fa-brands fa-github text-sm"></i>
+                <span>Repository GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub Profile Callout Banner -->
+        <div
+          class="mt-12 text-center p-8 rounded-2xl glass-card border border-slate-800 bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900"
+        >
+          <div class="max-w-xl mx-auto space-y-4">
+            <div
+              class="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mx-auto text-2xl border border-cyan-500/20"
+            >
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white">
+              Ingin melihat lebih banyak repository & aktivitas kode saya?
+            </h4>
+            <p class="text-slate-400 text-sm">
+              Kunjungi profil GitHub resmi saya untuk melihat histori commit,
+              eksperimen script, dan project latihan terkini.
+            </p>
+            <a
+              href="https://github.com/vidzz04"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm transition-all border border-slate-700 shadow-md"
+            >
+              <span>Buka github.com/vidzz04</span>
+              <i class="fa-solid fa-arrow-right text-cyan-400"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- KONTAK & MEDSOS SECTION -->
+      <section id="kontak" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+          <h2
+            class="text-xs sm:text-sm font-bold font-mono tracking-widest text-cyan-400 uppercase"
+          >
+            // Let's Connect
+          </h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Kontak & <span class="gradient-text">Media Sosial</span>
+          </h3>
+          
+          <div
+            class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-emerald-400 mx-auto rounded-full"
+          ></div>
+        </div>
+
+        <!-- Grid 4 Social Cards with Official Icons -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- WHATSAPP CARD -->
+          <a
+            href="https://wa.me/6285723780454"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-800 space-y-4 group flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div
+                class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-3xl group-hover:scale-110 transition-transform"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <span
+                  class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider"
+                  >WhatsApp</span
+                >
+                <h4
+                  class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors"
+                >
+                  Chat Direct WA
+                </h4>
+              </div>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Respon cepat untuk keperluan diskusi & konsultasi project.
+              </p>
+            </div>
+            <div
+              class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-emerald-400"
+            >
+              <span>+62 857-2378-0454</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+
+          <!-- TIKTOK CARD -->
+          <a
+            href="https://www.tiktok.com/@vidz429?_r=1&_t=ZS-98cKTAhYeea"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-800 space-y-4 group flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div
+                class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-3xl group-hover:scale-110 transition-transform"
+              >
+                <i class="fa-brands fa-tiktok"></i>
+              </div>
+              <div>
+                <span
+                  class="text-xs font-mono text-pink-400 font-bold uppercase tracking-wider"
+                  >TikTok</span
+                >
+                <h4
+                  class="text-lg font-bold text-white group-hover:text-pink-400 transition-colors"
+                >
+                  @vidz429
+                </h4>
+              </div>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Media berbagi aktivitas dan Keseruan ngulik kode
+              </p>
+            </div>
+            <div
+              class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-pink-400"
+            >
+              <span>Follow TikTok</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+
+          <!-- INSTAGRAM CARD -->
+          <a
+            href="https://www.instagram.com/_dvfbriansyah?igsh=Y3FhbXNyd3c4ZG9z"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-800 space-y-4 group flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div
+                class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-3xl group-hover:scale-110 transition-transform"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div>
+                <span
+                  class="text-xs font-mono text-purple-400 font-bold uppercase tracking-wider"
+                  >Instagram</span
+                >
+                <h4
+                  class="text-lg font-bold text-white group-hover:text-purple-400 transition-colors"
+                >
+                  @_dvfbriansyah
+                </h4>
+              </div>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Galeri aktivitas harian, hobi mancing 🎣, main game 🎮, dan
+                jejaring pertemanan.
+              </p>
+            </div>
+            <div
+              class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-purple-400"
+            >
+              <span>Kunjungi Profil</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+
+          <!-- GITHUB CARD -->
+          <a
+            href="https://github.com/vidzz04"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-800 space-y-4 group flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div
+                class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-3xl group-hover:scale-110 transition-transform"
+              >
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div>
+                <span
+                  class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider"
+                  >GitHub</span
+                >
+                <h4
+                  class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors"
+                >
+                  @vidzz04
+                </h4>
+              </div>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Penyimpanan kode sumber resmi proyek web, latihan PHP, dan
+                repositori publik.
+              </p>
+            </div>
+            <div
+              class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-cyan-400"
+            >
+              <span>Lihat Repositori</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Quick Direct Message Form Box -->
+        <div
+          class="mt-12 glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 max-w-2xl mx-auto space-y-6"
+        >
+          <div class="flex items-center space-x-3">
+            <div class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400">
+              <i class="fa-solid fa-paper-plane text-lg"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-white">Kirim Pesan Langsung</h4>
+              <p class="text-xs text-slate-400">
+                Pesan Anda akan disimulasikan untuk membuka WhatsApp secara
+                otomatis.
+              </p>
+            </div>
+          </div>
+
+          <form id="contact-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1"
+                  >Nama Pengirim</label
+                >
+                <input
+                  type="text"
+                  id="form-name"
+                  required
+                  placeholder="Contoh: Justin"
+                  class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-500 text-sm transition-colors"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1"
+                  >Mata Pelajaran / Topik Tugas</label
+                >
+                <input
+                  type="text"
+                  id="form-task-type"
+                  placeholder="Contoh: Web Native PHP / Tugas HTML"
+                  class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-500 text-sm transition-colors"
+                />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-1"
+                >Isi Pesan</label
+              >
+              <textarea
+                id="form-message"
+                rows="3"
+                required
+                placeholder="Tuliskan pertanyaan, atau pesan Anda di sini..."
+                class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-500 text-sm transition-colors resize-none"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full flex items-center justify-center space-x-2 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-sm hover:brightness-110 shadow-lg shadow-emerald-500/20 transition-all"
+            >
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Kirim Pesan Ke WhatsApp David</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="border-t border-slate-800/80 bg-slate-950 py-8 relative z-10"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400"
+      >
+        <div class="flex items-center space-x-3">
+          <!-- Brand Logo Footer -->
+          <div class="flex items-center space-x-3">
+            <img
+              src="logo-vz.png"
+              alt="Logo VZ"
+              class="w-7 h-7 object-contain rounded-lg"
+            />
+            <span>© 2026 <strong>David Febriansyah</strong></span>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <a
+            href="https://github.com/vidzz04"
+            target="_blank"
+            class="hover:text-cyan-400 transition-colors"
+          >
+            <i class="fa-brands fa-github text-sm"></i>
+          </a>
+          <a
+            href="https://wa.me/6285723780454"
+            target="_blank"
+            class="hover:text-emerald-400 transition-colors"
+          >
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/_dvfbriansyah"
+            target="_blank"
+            class="hover:text-purple-400 transition-colors"
+          >
+            <i class="fa-brands fa-instagram text-sm"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@vidz429"
+            target="_blank"
+            class="hover:text-pink-400 transition-colors"
+          >
+            <i class="fa-brands fa-tiktok text-sm"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
