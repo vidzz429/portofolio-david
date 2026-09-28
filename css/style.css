@@ -34,6 +34,7 @@ html {
 /* Gradient Text Effect */
 .gradient-text {
   background: linear-gradient(135deg, #38bdf8 0%, #22d3ee 50%, #34d399 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
